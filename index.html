@@ -721,6 +721,23 @@ footer{
 @media(max-width:480px){#intro{gap:12px;}#intro .intro-kicker{font-size:.58rem;letter-spacing:.14em;}#intro .mono-wrap,#intro .mono-wrap svg{width:86px;height:86px;}#intro .intro-title{letter-spacing:.15em;}#intro .intro-sub{font-size:.57rem;letter-spacing:.12em;}#intro .intro-project-links{width:min(100%,320px);flex-direction:column;}#intro .intro-project-links a{width:100%;}}
 @media(prefers-reduced-motion:reduce){#intro .intro-art img{animation:none;transform:none;}#intro .intro-kicker,#intro .intro-tagline,#intro .intro-project-links{animation:none;opacity:1;}}
 
+
+/* SIMPLE INTRO FIX: show the real portrait clearly, no pointless animation */
+#intro{background:radial-gradient(ellipse at center,#101629 0%,#050711 65%,#020309 100%) !important;gap:16px !important;}
+#intro .intro-art img{display:none !important;animation:none !important;transform:none !important;filter:none !important;}
+#intro .intro-art::after{background:transparent !important;}
+#intro .intro-art-grid{opacity:.14 !important;}
+#intro .intro-kicker,#intro .intro-live-dot,#intro .loader{display:none !important;animation:none !important;}
+#intro .mono-wrap.intro-avatar-wrap{width:190px !important;height:190px !important;min-width:190px !important;min-height:190px !important;margin:0 0 10px !important;filter:none !important;}
+#intro .intro-avatar{position:absolute !important;inset:7px !important;width:176px !important;height:176px !important;max-width:none !important;object-fit:cover !important;object-position:center 24% !important;border-radius:50% !important;border:3px solid #22d3ee !important;box-shadow:0 0 0 5px rgba(139,92,246,.25),0 0 25px rgba(34,211,238,.3) !important;animation:none !important;}
+#intro .mono-wrap.intro-avatar-wrap svg{width:190px !important;height:190px !important;position:absolute !important;inset:0 !important;animation:none !important;}
+#intro .ring,#intro .ring2{stroke-dashoffset:0 !important;animation:none !important;}
+#intro .intro-title,#intro .intro-sub,#intro .intro-tagline,#intro .intro-project-links{opacity:1 !important;animation:none !important;transform:none !important;}
+#intro .intro-title{margin:0 !important;}
+#intro .intro-footnote{margin-top:8px !important;}
+@media(max-width:480px){#intro .mono-wrap.intro-avatar-wrap{width:190px !important;height:190px !important;}#intro .intro-avatar{width:176px !important;height:176px !important;inset:7px !important;}#intro .mono-wrap.intro-avatar-wrap svg{width:190px !important;height:190px !important;}#intro .intro-project-links{flex-direction:column;}}
+@media(prefers-reduced-motion:reduce){#intro *{animation:none !important;transition:none !important;}}
+
 </style>
 </head>
 <body>
