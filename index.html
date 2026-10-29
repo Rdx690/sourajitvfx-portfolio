@@ -135,13 +135,17 @@ button{ font-family:inherit; cursor:pointer; }
   gap:26px; transition:opacity .8s var(--ease), visibility .8s;
 }
 #intro.hidden{ opacity:0; visibility:hidden; pointer-events:none; }
-#intro .mono-wrap{ position:relative; width:130px; height:130px; display:grid; place-items:center; }
-#intro .intro-avatar-wrap{border-radius:50%;}
-#intro .intro-avatar{position:absolute;inset:14px;width:102px;height:102px;object-fit:cover;object-position:center 25%;border-radius:50%;border:2px solid rgba(103,232,249,.72);box-shadow:0 0 24px rgba(34,211,238,.28),0 0 40px rgba(139,92,246,.22);}
-#intro .intro-avatar-wrap svg{position:relative;z-index:1;pointer-events:none;}
-#intro svg{ width:130px; height:130px; overflow:visible; }
-#intro .ring{ stroke-dasharray:220; stroke-dashoffset:220; animation:draw 1.6s var(--ease) forwards; }
-#intro .ring2{ stroke-dasharray:220; stroke-dashoffset:220; animation:draw 1.6s .15s var(--ease) forwards; }
+#intro .mono-wrap{position:relative;width:190px;height:190px;display:grid;place-items:center;flex-shrink:0;}
+#intro .intro-avatar-wrap{border-radius:50%;margin:10px 0 14px;}
+#intro .intro-avatar{position:absolute;inset:8px;width:174px;height:174px;object-fit:cover;object-position:center 25%;border-radius:50%;border:3px solid #22d3ee;box-shadow:0 0 0 5px rgba(139,92,246,.28),0 0 28px rgba(34,211,238,.35);z-index:1;}
+#intro .intro-avatar-wrap svg{position:relative;z-index:2;pointer-events:none;opacity:.95;}
+#intro svg{width:190px;height:190px;overflow:visible;}
+#intro .ring{stroke-dasharray:326;stroke-dashoffset:0;animation:none;}
+#intro .ring2{stroke-dasharray:264;stroke-dashoffset:0;animation:none;}
+#intro .intro-art img{opacity:.22;filter:brightness(.28) saturate(.85);animation:none;transform:scale(1);}
+#intro .intro-art::after{background:linear-gradient(180deg,rgba(4,5,12,.45),rgba(4,5,12,.84));}
+#intro .intro-kicker,#intro .loader{display:none;}
+@media(max-width:480px){#intro .mono-wrap{width:160px;height:160px;}#intro .intro-avatar{width:144px;height:144px;inset:8px;}#intro svg{width:160px;height:160px;}}
 @keyframes draw{ to{ stroke-dashoffset:0; } }
 #intro .slash{ opacity:0; animation:fadeIn .6s .8s forwards; }
 @keyframes fadeIn{ to{ opacity:1; } }
@@ -727,7 +731,7 @@ footer{
     <img src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/5ae724ac-6064-4f04-936c-bce595f85e8f.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYWFmNjU2MjcwNWIwYTBhOCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MzM2ODIzMX0.Fpt-v87pW_dC7qhuBtkA6MfQQ5hXqORSXM4xT8bJDqU" alt="" fetchpriority="high" />
     <div class="intro-art-grid"></div>
   </div>
-  <div class="intro-kicker"><span class="intro-live-dot"></span> DIGITAL WORLD · INITIALIZING</div>
+
   <div class="mono-wrap intro-avatar-wrap">
     <img class="intro-avatar" src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/5ae724ac-6064-4f04-936c-bce595f85e8f.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYWFmNjU2MjcwNWIwYTBhOCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MzM2ODIzMX0.Fpt-v87pW_dC7qhuBtkA6MfQQ5hXqORSXM4xT8bJDqU" alt="Sourajit portrait" fetchpriority="high" />
     <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -743,7 +747,7 @@ footer{
     <a class="intro-project-primary" href="https://github.com/Rdx690/VFX-MINI" target="_blank" rel="noopener noreferrer">Explore VFX MINI <span aria-hidden="true">↗</span></a>
     <a class="intro-project-secondary" href="https://github.com/Rdx690/sourajitvfx-portfolio" target="_blank" rel="noopener noreferrer">View Portfolio Source <span aria-hidden="true">↗</span></a>
   </div>
-  <div class="loader"><i></i></div>
+
   <div class="intro-footnote">BUILT WITH CURIOSITY · POWERED BY SOURAJIT</div>
 </div>
 
