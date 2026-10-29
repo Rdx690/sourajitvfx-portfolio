@@ -803,6 +803,19 @@ footer{
 @media(max-height:700px){#intro{gap:9px!important;padding:12px!important;}#intro .intro-avatar-wrap{width:150px!important;height:150px!important;}#intro .intro-avatar{width:134px!important;height:134px!important;inset:8px!important;}#intro .intro-avatar-wrap svg{width:150px!important;height:150px!important;}#intro .intro-footnote{display:none;}}
 @media(prefers-reduced-motion:reduce){#intro *,#intro:before{animation:none!important;transition:none!important;opacity:1!important;}}
 
+
+/* HERO PROFILE FIRST — show the owner's photo and identity immediately */
+.hero-profile{display:flex;align-items:center;gap:15px;margin:0 0 25px;max-width:460px;padding:12px 16px 12px 12px;border-radius:20px;border:1px solid rgba(103,232,249,.2);background:linear-gradient(115deg,rgba(13,23,43,.84),rgba(22,17,42,.7));box-shadow:0 12px 34px rgba(0,0,0,.16);animation:heroProfileIn .7s cubic-bezier(.2,.8,.2,1) both;}
+.hero-profile>img{width:78px;height:78px;flex:0 0 78px;object-fit:cover;object-position:center 24%;border-radius:50%;border:2px solid #67e8f9;box-shadow:0 0 0 4px rgba(139,92,246,.18),0 0 20px rgba(34,211,238,.14);}
+.hero-profile-copy{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.hero-profile-kicker{font:600 .58rem var(--font-mono);letter-spacing:.18em;color:#67e8f9;}
+.hero-profile-copy strong{font:800 1.05rem var(--font-display);letter-spacing:.13em;color:#f8fafc;}
+.hero-profile-copy strong span{color:#67e8f9;}
+.hero-profile-copy small{font-size:.72rem;line-height:1.5;color:#aab5ce;}
+@keyframes heroProfileIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:480px){.hero-profile{margin-bottom:21px;padding:10px 12px;gap:12px;border-radius:17px}.hero-profile>img{width:68px;height:68px;flex-basis:68px}.hero-profile-copy strong{font-size:.95rem}.hero-profile-copy small{font-size:.66rem}}
+@media(prefers-reduced-motion:reduce){.hero-profile{animation:none!important;}}
+
 </style>
 </head>
 <body>
@@ -901,6 +914,10 @@ footer{
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
+        <div class="hero-profile">
+          <img src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/5ae724ac-6064-4f04-936c-bce595f85e8f.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYWFmNjU2MjcwNWIwYTBhOCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsImV4cCI6MTc5MzM2ODIzMX0.Fpt-v87pW_dC7qhuBtkA6MfQQ5hXqORSXM4xT8bJDqU" alt="Sourajit portrait" fetchpriority="high" />
+          <div class="hero-profile-copy"><span class="hero-profile-kicker">PORTFOLIO · 2026</span><strong>SOURAJIT <span>VFX</span></strong><small>Developer · Bot Builder · Creative Explorer</small></div>
+        </div>
         <div class="hero-status">
           <span class="dot"></span>
           <span>Currently learning &amp; building</span>
