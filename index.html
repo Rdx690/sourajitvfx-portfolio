@@ -136,6 +136,9 @@ button{ font-family:inherit; cursor:pointer; }
 }
 #intro.hidden{ opacity:0; visibility:hidden; pointer-events:none; }
 #intro .mono-wrap{ position:relative; width:130px; height:130px; display:grid; place-items:center; }
+#intro .intro-avatar-wrap{border-radius:50%;}
+#intro .intro-avatar{position:absolute;inset:14px;width:102px;height:102px;object-fit:cover;object-position:center 25%;border-radius:50%;border:2px solid rgba(103,232,249,.72);box-shadow:0 0 24px rgba(34,211,238,.28),0 0 40px rgba(139,92,246,.22);}
+#intro .intro-avatar-wrap svg{position:relative;z-index:1;pointer-events:none;}
 #intro svg{ width:130px; height:130px; overflow:visible; }
 #intro .ring{ stroke-dasharray:220; stroke-dashoffset:220; animation:draw 1.6s var(--ease) forwards; }
 #intro .ring2{ stroke-dasharray:220; stroke-dashoffset:220; animation:draw 1.6s .15s var(--ease) forwards; }
@@ -725,12 +728,12 @@ footer{
     <div class="intro-art-grid"></div>
   </div>
   <div class="intro-kicker"><span class="intro-live-dot"></span> DIGITAL WORLD · INITIALIZING</div>
-  <div class="mono-wrap">
-    <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <div class="mono-wrap intro-avatar-wrap">
+    <img class="intro-avatar" src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/5ae724ac-6064-4f04-936c-bce595f85e8f.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYWFmNjU2MjcwNWIwYTBhOCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MzM2ODIzMX0.Fpt-v87pW_dC7qhuBtkA6MfQQ5hXqORSXM4xT8bJDqU" alt="Sourajit portrait" fetchpriority="high" />
+    <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs><linearGradient id="ig" x1="0" y1="0" x2="130" y2="130" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
-      <circle class="ring" cx="65" cy="65" r="52" stroke="url(#ig)" stroke-width="2" opacity=".75"/>
-      <circle class="ring2" cx="65" cy="65" r="42" stroke="url(#ig)" stroke-width="1.5" opacity=".5"/>
-      <path class="slash" d="M46 44c-7 4-10 11-10 21s3 17 10 21M84 44c7 4 10 11 10 21s-3 17-10 21M50 65h30" stroke="url(#ig)" stroke-width="3" stroke-linecap="round"/>
+      <circle class="ring" cx="65" cy="65" r="52" stroke="url(#ig)" stroke-width="2" opacity=".95"/>
+      <circle class="ring2" cx="65" cy="65" r="42" stroke="url(#ig)" stroke-width="1.5" opacity=".8"/>
     </svg>
   </div>
   <div class="intro-title">SOURAJITVFX</div>
