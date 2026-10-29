@@ -738,6 +738,38 @@ footer{
 @media(max-width:480px){#intro .mono-wrap.intro-avatar-wrap{width:190px !important;height:190px !important;}#intro .intro-avatar{width:176px !important;height:176px !important;inset:7px !important;}#intro .mono-wrap.intro-avatar-wrap svg{width:190px !important;height:190px !important;}#intro .intro-project-links{flex-direction:column;}}
 @media(prefers-reduced-motion:reduce){#intro *{animation:none !important;transition:none !important;}}
 
+
+/* FEATURED PROJECT SPOTLIGHT — clean, responsive, no intro animation */
+#featured-spotlight{padding:34px 0 22px;position:relative;}
+#featured-spotlight .spotlight-card{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr);gap:26px;align-items:center;overflow:hidden;padding:clamp(24px,5vw,48px);border:1px solid rgba(103,232,249,.2);border-radius:26px;background:linear-gradient(120deg,rgba(14,20,38,.96),rgba(12,11,28,.96));box-shadow:0 20px 60px rgba(0,0,0,.2);}
+#featured-spotlight .spotlight-copy{position:relative;z-index:2;}
+#featured-spotlight .spotlight-label{display:inline-flex;align-items:center;gap:9px;color:#a5f3fc;font:600 .68rem var(--font-mono);letter-spacing:.18em;}
+#featured-spotlight .spotlight-dot{width:7px;height:7px;border-radius:50%;background:#22d3ee;box-shadow:0 0 10px rgba(34,211,238,.55);}
+#featured-spotlight h2{font-size:clamp(2rem,5vw,3.4rem);line-height:1.08;letter-spacing:-.04em;margin:15px 0 12px;font-weight:850;color:#f8fafc;}
+#featured-spotlight h2 span{background:linear-gradient(100deg,#67e8f9,#a78bfa);background-clip:text;-webkit-background-clip:text;color:transparent;}
+#featured-spotlight p{max-width:530px;color:#aeb8d0;line-height:1.8;margin:0;}
+#featured-spotlight .spotlight-tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 24px;}
+#featured-spotlight .spotlight-tags span{font-size:.72rem;color:#cbd5e1;border:1px solid rgba(148,163,184,.22);background:rgba(255,255,255,.035);border-radius:999px;padding:7px 11px;}
+#featured-spotlight .spotlight-actions{display:flex;flex-wrap:wrap;gap:10px;}
+#featured-spotlight .spotlight-actions a{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border-radius:12px;padding:12px 17px;font-size:.84rem;font-weight:750;transition:background .2s,border-color .2s;}
+#featured-spotlight .spotlight-primary{color:#041018;background:linear-gradient(110deg,#67e8f9,#a78bfa);}
+#featured-spotlight .spotlight-primary:hover{filter:brightness(1.08);}
+#featured-spotlight .spotlight-secondary{color:#e2e8f0;border:1px solid rgba(148,163,184,.3);background:rgba(255,255,255,.035);}
+#featured-spotlight .spotlight-secondary:hover{border-color:#67e8f9;}
+#featured-spotlight .spotlight-art{position:relative;min-height:250px;display:grid;place-items:center;isolation:isolate;}
+#featured-spotlight .spotlight-art:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(34,211,238,.17),rgba(139,92,246,.12) 48%,transparent 72%);z-index:-1;}
+#featured-spotlight .spotlight-orbit{position:absolute;border-radius:50%;border:1px solid rgba(103,232,249,.38);width:210px;height:210px;}
+#featured-spotlight .orbit-two{width:170px;height:170px;border-color:rgba(167,139,250,.6);}
+#featured-spotlight .spotlight-core{display:flex;flex-direction:column;align-items:center;justify-content:center;width:130px;height:130px;border-radius:24px;border:1px solid rgba(103,232,249,.35);background:linear-gradient(145deg,rgba(17,30,53,.95),rgba(29,18,53,.95));box-shadow:0 0 35px rgba(34,211,238,.12);transform:rotate(-5deg);}
+#featured-spotlight .spotlight-core span{font-size:1.05rem;font-weight:900;letter-spacing:.2em;color:#f8fafc;}
+#featured-spotlight .spotlight-core strong{font-size:1.65rem;letter-spacing:.12em;color:#22d3ee;line-height:1.2;}
+#featured-spotlight .spotlight-core small{font-size:.48rem;letter-spacing:.16em;color:#a5b4fc;margin-top:7px;}
+#featured-spotlight .spotlight-chip{position:absolute;font:600 .56rem var(--font-mono);letter-spacing:.1em;color:#dbeafe;border:1px solid rgba(148,163,184,.22);border-radius:8px;padding:8px 10px;background:rgba(8,12,25,.8);}
+#featured-spotlight .chip-top{top:18%;right:2%;}
+#featured-spotlight .chip-bottom{bottom:16%;left:1%;}
+@media(max-width:680px){#featured-spotlight{padding:20px 0 12px;}#featured-spotlight .spotlight-card{grid-template-columns:1fr;gap:8px;border-radius:20px;}#featured-spotlight .spotlight-art{min-height:210px;order:-1;}#featured-spotlight .spotlight-orbit{width:178px;height:178px;}#featured-spotlight .orbit-two{width:144px;height:144px;}#featured-spotlight .spotlight-art:before{width:185px;height:185px;}#featured-spotlight .spotlight-core{width:112px;height:112px;}#featured-spotlight .chip-top{right:7%;top:12%;}#featured-spotlight .chip-bottom{left:5%;bottom:10%;}#featured-spotlight .spotlight-actions a{flex:1;}}
+@media(prefers-reduced-motion:reduce){#featured-spotlight *{scroll-behavior:auto!important;transition:none!important;}}
+
 </style>
 </head>
 <body>
@@ -1030,6 +1062,29 @@ footer{
         <div class="skill-chips">
           <span>Git</span><span>GitHub</span><span>Vercel</span><span>Render</span><span>Railway</span><span>Koyeb</span><span>Linux</span>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECT SPOTLIGHT -->
+<section id="featured-spotlight" aria-labelledby="featured-title">
+  <div class="container">
+    <div class="spotlight-card">
+      <div class="spotlight-copy">
+        <span class="spotlight-label"><span class="spotlight-dot"></span> FEATURED BUILD</span>
+        <h2 id="featured-title">Meet <span>VFX MINI</span></h2>
+        <p>A mini bot project by SourajitVFX. Explore the source code, check the features, and follow the next updates.</p>
+        <div class="spotlight-tags"><span>Node.js</span><span>Telegram Bot</span><span>Open Source</span></div>
+        <div class="spotlight-actions">
+          <a class="spotlight-primary" href="https://github.com/Rdx690/VFX-MINI" target="_blank" rel="noopener noreferrer">Explore VFX MINI <span aria-hidden="true">↗</span></a>
+          <a class="spotlight-secondary" href="https://github.com/Rdx690" target="_blank" rel="noopener noreferrer">More on GitHub</a>
+        </div>
+      </div>
+      <div class="spotlight-art" aria-hidden="true">
+        <div class="spotlight-orbit orbit-one"></div><div class="spotlight-orbit orbit-two"></div>
+        <div class="spotlight-core"><span>VFX</span><strong>MINI</strong><small>BY SOURAJIT</small></div>
+        <span class="spotlight-chip chip-top">BUILD · CREATE</span><span class="spotlight-chip chip-bottom">BOT / DEV</span>
       </div>
     </div>
   </div>
