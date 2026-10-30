@@ -855,6 +855,14 @@ footer{
 @media(max-width:480px){.hero-profile{margin-bottom:21px;padding:10px 12px;gap:12px;border-radius:17px}.hero-profile>img{width:68px;height:68px;flex-basis:68px}.hero-profile-copy strong{font-size:.95rem}.hero-profile-copy small{font-size:.66rem}}
 @media(prefers-reduced-motion:reduce){.hero-profile{animation:none!important;}}
 
+
+/* Broken-image repair: use a designed monogram until a valid portrait is uploaded. */
+.hero-profile{isolation:isolate;}
+.hero-profile::before{content:none!important;}
+.hero-avatar-fallback{width:92px;height:92px;flex:0 0 92px;border-radius:50%;display:grid;place-items:center;font:800 2.6rem/1 "Space Grotesk",sans-serif;color:#f4f2ff;background:radial-gradient(circle at 30% 25%,#a78bfa,#5140a8 55%,#102a46);border:3px solid #67e8f9;box-shadow:0 0 0 5px rgba(139,92,246,.18),0 0 24px rgba(34,211,238,.22);}
+.intro-avatar-fallback{position:absolute;inset:9px;display:grid;place-items:center;border-radius:50%;font:800 4rem/1 "Space Grotesk",sans-serif;color:#fff;background:radial-gradient(circle at 30% 25%,#a78bfa,#5140a8 55%,#102a46);border:3px solid #67e8f9;box-shadow:0 0 0 5px rgba(139,92,246,.18);z-index:1;}
+@media(max-width:480px){.hero-avatar-fallback{width:76px;height:76px;flex-basis:76px;font-size:2.1rem;}}
+
 </style>
 
 <style>
@@ -895,12 +903,12 @@ section{scroll-margin-top:5.5rem}
 <!-- CINEMATIC INTRO OVERLAY -->
 <div id="intro" aria-hidden="true">
   <div class="intro-art" aria-hidden="true">
-    <img src="https://sourajitvfx.vercel.app/assets/sourajit-avatar.jpg?v=20261029fix2" alt="" fetchpriority="high" />
+    <!-- Portrait intentionally omitted until the real image file is uploaded. -->
     <div class="intro-art-grid"></div>
   </div>
 
   <div class="mono-wrap intro-avatar-wrap">
-    <img class="intro-avatar" src="https://sourajitvfx.vercel.app/assets/sourajit-avatar.jpg?v=20261029fix2" alt="Sourajit portrait" fetchpriority="high" />
+    <div class="intro-avatar-fallback" aria-label="Sourajit profile placeholder">S</div>
     <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs><linearGradient id="ig" x1="0" y1="0" x2="130" y2="130" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
       <circle class="ring" cx="65" cy="65" r="52" stroke="url(#ig)" stroke-width="2" opacity=".95"/>
@@ -987,7 +995,7 @@ section{scroll-margin-top:5.5rem}
     <div class="hero-grid">
       <div class="hero-left">
         <div class="hero-profile">
-          <img src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/5ae724ac-6064-4f04-936c-bce595f85e8f.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYWFmNjU2MjcwNWIwYTBhOCIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsImV4cCI6MTc5MzM2ODIzMX0.Fpt-v87pW_dC7qhuBtkA6MfQQ5hXqORSXM4xT8bJDqU" alt="Sourajit portrait" fetchpriority="high" />
+          <div class="hero-avatar-fallback" role="img" aria-label="Sourajit profile placeholder">S</div>
           <div class="hero-profile-copy"><span class="hero-profile-kicker">PORTFOLIO · 2026</span><strong>SOURAJIT <span>VFX</span></strong><small>Developer · Bot Builder · Creative Explorer</small></div>
         </div>
         <div class="hero-status">
