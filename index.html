@@ -863,6 +863,34 @@ footer{
 .intro-avatar-fallback{position:absolute;inset:9px;display:grid;place-items:center;border-radius:50%;font:800 4rem/1 "Space Grotesk",sans-serif;color:#fff;background:radial-gradient(circle at 30% 25%,#a78bfa,#5140a8 55%,#102a46);border:3px solid #67e8f9;box-shadow:0 0 0 5px rgba(139,92,246,.18);z-index:1;}
 @media(max-width:480px){.hero-avatar-fallback{width:76px;height:76px;flex-basis:76px;font-size:2.1rem;}}
 
+
+/* ===== Neon creator portfolio refresh ===== */
+.hero{min-height:calc(100vh - var(--nav-h));padding-top:calc(var(--nav-h) + 34px);padding-bottom:52px;overflow:hidden;background:radial-gradient(ellipse at 78% 42%,rgba(24,94,255,.2),transparent 42%),radial-gradient(ellipse at 55% 85%,rgba(117,35,255,.12),transparent 38%)}
+.hero-grid{grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);gap:clamp(24px,4vw,58px)}
+.hero-profile{display:flex;align-items:center;gap:16px;padding:15px 18px;margin-bottom:24px;border:1px solid rgba(94,205,255,.3);border-radius:20px;background:linear-gradient(120deg,rgba(18,57,88,.78),rgba(19,28,62,.76));box-shadow:0 12px 42px rgba(0,0,0,.25);backdrop-filter:blur(14px)}
+.hero-avatar-fallback{width:76px;height:76px;flex:0 0 76px;display:grid;place-items:center;border-radius:50%;font-size:2.2rem;font-weight:800;color:white;background:linear-gradient(140deg,#a855f7,#2826a9);border:4px solid #35dfff;box-shadow:0 0 0 5px #633dca55,0 0 28px #20cfff88}
+.hero-profile-copy{display:grid;gap:3px}.hero-profile-kicker,.hero-kicker{font:700 .75rem var(--font-mono);letter-spacing:.2em;color:#46eaff}.hero-profile-copy strong{font:700 1.1rem var(--font-display);letter-spacing:.1em}.hero-profile-copy strong span{color:#43dfff}.hero-profile-copy small{font-size:.82rem;color:#c5d4eb}
+.hero-status{background:#e8faff;color:#0877b9;border:0;box-shadow:0 0 24px #36d9ff33;font-weight:700}
+.hero-kicker{margin:10px 0 8px}.hero h1{font-size:clamp(3.3rem,7vw,6.2rem);line-height:.96;margin:0 0 20px;max-width:620px}.hero h1 .grad{background:linear-gradient(100deg,#08aaff,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-desc{max-width:490px;font-size:clamp(.98rem,1.35vw,1.12rem);line-height:1.65;color:#c4d2e9}
+.hero-cta{gap:12px}.hero-cta .btn{border-radius:14px}.hero-socials{display:flex;gap:12px;margin:4px 0 22px}.hero-socials a{width:48px;height:48px;display:grid;place-items:center;border:1px solid #23caff;border-radius:12px;color:#fff;font-size:1.55rem;background:#07172c;box-shadow:inset 0 0 16px #138dff22,0 0 15px #118bff22;transition:.25s}.hero-socials a:hover{transform:translateY(-4px);box-shadow:0 0 22px #14bfff88}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:18px 0;padding:16px 12px;border:1px solid #36baff55;border-radius:16px;background:linear-gradient(120deg,#08213bdc,#111d3de8);box-shadow:0 12px 34px #0005}.hero-stats div{display:grid;gap:2px;text-align:center;border-right:1px solid #7ca7cf22}.hero-stats div:last-child{border:0}.hero-stats b{font:700 1.3rem var(--font-display);color:#f5fbff}.hero-stats span{font-size:.72rem;color:#aebed8}
+.hero-tags .tag{border-color:#248cce88;background:#071a31;color:#d7eaff}
+.hero-portrait-visual{min-height:610px;display:flex;align-items:flex-end;justify-content:center;isolation:isolate}
+.hero-portrait-visual:before{content:"";position:absolute;inset:5% 0 0;border-radius:48% 48% 22px 22px;background:radial-gradient(ellipse at 55% 42%,#0c7fff55,transparent 55%),linear-gradient(145deg,#07152b,#111044 55%,#04101e);border:1px solid #168bff55;box-shadow:0 0 70px #075dff33;z-index:-2}
+.portrait-frame{position:relative;width:min(100%,520px);height:590px;overflow:hidden;border-radius:48% 48% 18px 18px;display:flex;align-items:flex-end;justify-content:center;mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 76%,transparent 100%)}
+.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:contrast(1.04) saturate(1.08);mix-blend-mode:normal}
+.portrait-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#06102055,transparent 35%,transparent 70%,#07152b44),linear-gradient(0deg,#06101d 0%,transparent 38%);pointer-events:none}
+.portrait-fallback-mark{display:none;position:absolute;inset:0;place-items:center;font-size:15rem;font-weight:800;color:#dbeaff;background:radial-gradient(circle at 50% 35%,#1d71c5,#080f25 68%)}
+.portrait-fallback .portrait-fallback-mark{display:grid}
+.portrait-neon-sign{position:absolute;right:2%;top:14%;z-index:3;color:#31d9ff;font:700 1.2rem var(--font-mono);text-shadow:0 0 12px #00bfff,0 0 30px #087bff;transform:rotate(-8deg)}
+.portrait-neon-sign span{display:block;font-size:1rem;letter-spacing:.12em}
+.portrait-float-code,.portrait-float-play{position:absolute;z-index:4;width:66px;height:58px;display:grid;place-items:center;border:2px solid #08caff;border-radius:12px;color:#48eaff;font:700 1.5rem var(--font-mono);box-shadow:0 0 20px #00aaff88;background:#04172b99}
+.portrait-float-code{left:4%;top:35%}.portrait-float-play{right:0;top:56%;border-color:#db4cff;color:#f2a5ff;box-shadow:0 0 22px #cf37ff99}
+.hero-portrait-visual .fb-1{top:7%;left:-3%}.hero-portrait-visual .fb-2{bottom:8%;right:-2%}
+@media(max-width:900px){.hero{padding-top:calc(var(--nav-h) + 24px)}.hero-grid{grid-template-columns:1fr;gap:20px}.hero-left{position:relative;z-index:2}.hero-portrait-visual{min-height:480px;margin-top:-12px}.portrait-frame{height:500px;width:min(100%,480px)}.hero-portrait-visual:before{inset:0 4% 0}.portrait-neon-sign{right:8%;top:7%}}
+@media(max-width:560px){.hero{padding-top:calc(var(--nav-h) + 20px);padding-bottom:32px}.hero-profile{padding:12px;gap:12px}.hero-avatar-fallback{width:62px;height:62px;flex-basis:62px;font-size:1.8rem}.hero-profile-copy strong{font-size:.98rem}.hero-profile-copy small{font-size:.7rem}.hero h1{font-size:clamp(3.15rem,15vw,4.7rem)}.hero-desc{font-size:.96rem}.hero-stats{grid-template-columns:repeat(2,1fr);row-gap:14px}.hero-stats div:nth-child(2){border:0}.hero-portrait-visual{min-height:390px}.portrait-frame{height:420px;width:100%}.portrait-float-code{left:0;top:30%;width:54px;height:48px}.portrait-float-play{right:0;top:52%;width:54px;height:48px}.portrait-neon-sign{right:0;font-size:.9rem}.hero-portrait-visual .fb-1{left:0}.hero-portrait-visual .fb-2{right:0}}
+
 </style>
 
 <style>
@@ -1378,65 +1406,39 @@ footer a{color:#356fc4!important}
     <div class="hero-grid">
       <div class="hero-left">
         <div class="hero-profile">
-          <div class="hero-avatar-fallback" role="img" aria-label="Sourajit profile placeholder">S</div>
+          <div class="hero-avatar-fallback" role="img" aria-label="Sourajit profile">S</div>
           <div class="hero-profile-copy"><span class="hero-profile-kicker">PORTFOLIO · 2026</span><strong>SOURAJIT <span>VFX</span></strong><small>Developer · Bot Builder · Creative Explorer</small></div>
         </div>
-        <div class="hero-status">
-          <span class="dot"></span>
-          <span>Currently learning &amp; building</span>
-        </div>
-        <h1>
-          Building ideas into
-          <span class="grad">digital reality.</span>
-        </h1>
-        <p class="hero-desc">
-          I'm Sourajit — an aspiring developer from Tripura, India, exploring bots, web
-          applications, APIs, and creative digital experiences. I learn by building,
-          experiment with new ideas, and keep improving every project.
-        </p>
+        <div class="hero-status"><span class="dot"></span><span>Currently learning &amp; building</span></div>
+        <div class="hero-kicker">BUILDING IDEAS INTO</div>
+        <h1>digital <span class="grad">reality.</span></h1>
+        <p class="hero-desc">I'm Sourajit — an aspiring developer from Tripura, India, exploring bots, web applications, APIs, and creative digital experiences. I learn by building, experiment with new ideas, and keep improving every project.</p>
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            Explore My Projects
-          </a>
-          <a href="https://github.com/Rdx690" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-            Visit GitHub
-          </a>
+          <a href="#projects" class="btn btn-primary"><span aria-hidden="true">→</span> Explore My Projects</a>
+          <a href="https://github.com/Rdx690" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">◉ Visit GitHub</a>
+        </div>
+        <div class="hero-socials" aria-label="Social links">
+          <a href="https://www.instagram.com/sourajitvfx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+          <a href="https://www.youtube.com/@sourajitvfxx" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Telegram">➤</a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">◉</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>20+</b><span>Projects</span></div><div><b>1K+</b><span>Followers</span></div><div><b>5+</b><span>Technologies</span></div><div><b>∞</b><span>Learning</span></div>
         </div>
         <div class="hero-tags">
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Telegram Bots</span>
-          <span class="tag">REST APIs</span>
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">PHP</span><span class="tag">MongoDB</span>
         </div>
       </div>
-
-      <div class="hero-visual">
-        <div class="float-badge fb-1"><span class="dot-sm"></span> status: building</div>
-        <div class="hero-card">
-          <div class="terminal-head">
-            <span class="term-dot r"></span>
-            <span class="term-dot y"></span>
-            <span class="term-dot g"></span>
-            <span class="terminal-title">sourajit@vfx:~$</span>
-          </div>
-          <div class="terminal-body" id="heroTerminal">
-            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd"> whoami</span></div>
-            <div class="term-line"><span class="term-out">aspiring developer · Tripura, India</span></div>
-            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd"> cat stack.json</span></div>
-            <div class="term-line"><span class="term-out">{</span></div>
-            <div class="term-line"><span class="term-out">  <span class="str">"web"</span>: [<span class="str">"HTML"</span>, <span class="str">"CSS"</span>, <span class="str">"JS"</span>],</span></div>
-            <div class="term-line"><span class="term-out">  <span class="str">"bots"</span>: [<span class="str">"Node.js"</span>, <span class="str">"Telegraf"</span>],</span></div>
-            <div class="term-line"><span class="term-out">  <span class="str">"deploy"</span>: [<span class="str">"Vercel"</span>, <span class="str">"Render"</span>]</span></div>
-            <div class="term-line"><span class="term-out">}</span></div>
-            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd"> echo "keep building"</span></div>
-            <div class="term-line"><span class="term-out">keep building</span></div>
-            <div class="term-line" style="margin-top:6px;"><span class="term-prompt">$</span><span class="term-cmd"> </span><span style="width:8px;height:1em;background:var(--cyan);display:inline-block;animation:blink 1s steps(2) infinite;"></span></div>
-          </div>
+      <div class="hero-visual hero-portrait-visual">
+        <div class="portrait-neon-sign">♛ <span>SOURAJITVFX</span></div>
+        <div class="portrait-frame">
+          <img class="hero-portrait" src="assets/sourajit-avatar.jpg" alt="Sourajit VFX portrait" fetchpriority="high" onerror="this.style.display='none';this.parentElement.classList.add('portrait-fallback');" />
+          <div class="portrait-fallback-mark" aria-hidden="true">S</div>
         </div>
+        <div class="portrait-float-code" aria-hidden="true">&lt;/&gt;</div>
+        <div class="portrait-float-play" aria-hidden="true">▶</div>
+        <div class="float-badge fb-1"><span class="dot-sm"></span> status: building</div>
         <div class="float-badge fb-2"><span class="dot-sm"></span> always learning</div>
       </div>
     </div>
