@@ -905,6 +905,56 @@ section{scroll-margin-top:5.5rem}
 #intro>*:not(.intro-art){display:none!important}
 @keyframes introArtworkReveal{from{opacity:0;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
 @media(max-aspect-ratio:4/5){#intro .intro-art img{object-fit:contain!important;background:#03050b!important}}
+
+/* CREATOR COMMAND CENTER */
+#studio-dashboard{position:relative;overflow:hidden;background:radial-gradient(ellipse at 8% 8%,rgba(34,211,238,.075),transparent 34%),radial-gradient(ellipse at 92% 45%,rgba(139,92,246,.09),transparent 38%),rgba(5,8,18,.35)}
+.studio-overview{display:flex;justify-content:space-between;align-items:center;gap:28px;padding:28px 30px;margin:28px 0 22px;border:1px solid rgba(125,211,252,.19);border-radius:24px;background:linear-gradient(120deg,rgba(15,23,42,.9),rgba(17,24,39,.65));box-shadow:0 18px 60px rgba(0,0,0,.2)}
+.studio-overview-copy>span:nth-child(2){font:600 .65rem var(--font-mono);letter-spacing:.18em;color:#67e8f9}
+.studio-live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 12px #34d399;margin-right:9px}
+.studio-overview h3{font:800 clamp(1.5rem,3vw,2.2rem) var(--font-display);margin:10px 0 5px;color:#f8fafc}
+.studio-overview p,.studio-group-head p{margin:0;color:#9aa8c3;font-size:.9rem}
+.studio-stats{display:flex;gap:30px}
+.studio-stats div{display:flex;flex-direction:column;gap:5px;min-width:78px}
+.studio-stats strong{font:800 1.7rem var(--font-display);color:#e0f2fe}
+.studio-stats span{font-size:.7rem;color:#94a3b8}
+.studio-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:20px 0 34px}
+.studio-search{display:flex;align-items:center;gap:10px;min-width:min(100%,290px);padding:11px 15px;border:1px solid rgba(148,163,184,.2);border-radius:13px;background:rgba(15,23,42,.72);color:#67e8f9}
+.studio-search span{font-size:1.35rem}
+.studio-search input{width:100%;border:0;outline:0;background:transparent;color:#f8fafc;font:500 .85rem var(--font-body)}
+.studio-search input::placeholder{color:#71809b}
+.studio-filters{display:flex;gap:7px;flex-wrap:wrap}
+.studio-filter{border:1px solid rgba(148,163,184,.2);border-radius:999px;padding:8px 13px;background:rgba(15,23,42,.65);color:#aab5ce;font:600 .72rem var(--font-body);cursor:pointer;transition:.2s}
+.studio-filter:hover,.studio-filter.active{border-color:rgba(34,211,238,.55);background:rgba(34,211,238,.1);color:#a5f3fc}
+.studio-group-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:34px 0 17px}
+.studio-group-head h3{margin:5px 0 0;font:800 1.45rem var(--font-display);color:#f8fafc}
+.studio-count{font:600 .62rem var(--font-mono);letter-spacing:.13em;color:#67e8f9;padding:7px 10px;border:1px solid rgba(34,211,238,.2);border-radius:999px}
+.studio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.studio-card{position:relative;display:flex;flex-direction:column;min-height:235px;padding:19px;border:1px solid rgba(148,163,184,.15);border-radius:19px;background:linear-gradient(150deg,rgba(15,23,42,.92),rgba(8,13,26,.88));transition:transform .22s,border-color .22s,box-shadow .22s;overflow:hidden}
+.studio-card::before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(34,211,238,.42),rgba(139,92,246,.38),transparent);opacity:.65}
+.studio-card:hover{transform:translateY(-4px);border-color:rgba(103,232,249,.36);box-shadow:0 16px 38px rgba(0,0,0,.22)}
+.studio-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:17px}
+.studio-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,rgba(34,211,238,.15),rgba(139,92,246,.18));border:1px solid rgba(103,232,249,.17);color:#a5f3fc;font-size:1.25rem}
+.studio-status{font:700 .55rem var(--font-mono);letter-spacing:.1em;padding:6px 8px;border-radius:999px;white-space:nowrap}
+.studio-status.is-live{color:#6ee7b7;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2)}
+.studio-status.is-build{color:#fcd34d;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.2)}
+.studio-status.is-concept{color:#c4b5fd;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.2)}
+.studio-status.is-review{color:#fcd34d;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.19)}
+.studio-status.is-locked{color:#fda4af;background:rgba(244,63,94,.08);border:1px solid rgba(244,63,94,.2)}
+.studio-card h4{font:750 1.02rem var(--font-display);color:#f1f5f9;margin:0 0 8px}
+.studio-card p{font-size:.79rem;line-height:1.65;color:#9aa8c3;margin:0 0 15px}
+.studio-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-bottom:15px}
+.studio-tags span{font:500 .62rem var(--font-mono);padding:5px 7px;border-radius:7px;background:rgba(148,163,184,.08);color:#aab5ce}
+.studio-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.studio-actions a,.studio-no-link{display:inline-flex;align-items:center;justify-content:center;padding:8px 10px;border-radius:9px;font:650 .68rem var(--font-body);text-decoration:none}
+.studio-actions a{color:#a5f3fc;border:1px solid rgba(34,211,238,.25);background:rgba(34,211,238,.07)}
+.studio-actions a:hover{background:rgba(34,211,238,.15)}
+.studio-no-link{color:#78869e;border:1px dashed rgba(148,163,184,.2);cursor:not-allowed}
+.studio-tools-head{margin-top:52px}
+.studio-tools-head p{margin-top:6px;max-width:600px}
+.studio-footnote{margin:20px 0 0;padding:14px 16px;border-left:2px solid #f59e0b;background:rgba(245,158,11,.055);color:#9aa8c3;font-size:.75rem;line-height:1.7}
+.studio-card[hidden]{display:none!important}
+@media(max-width:900px){.studio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.studio-overview{align-items:flex-start;flex-direction:column}.studio-stats{width:100%;justify-content:space-between}}
+@media(max-width:560px){.studio-grid{grid-template-columns:1fr}.studio-overview{padding:21px}.studio-stats{gap:14px}.studio-stats strong{font-size:1.4rem}.studio-group-head{align-items:flex-start}.studio-count{font-size:.54rem}.studio-toolbar{align-items:stretch}.studio-search{width:100%}.studio-filters{width:100%}.studio-filter{flex:1}}
 </style>
 </head>
 <body>
@@ -946,6 +996,7 @@ section{scroll-margin-top:5.5rem}
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#studio-dashboard">Studio</a></li>
         <li><a href="#journey">Journey</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -1363,6 +1414,152 @@ section{scroll-margin-top:5.5rem}
       </article>
 
     </div>
+  </div>
+</section>
+
+<!-- SOURAJIT VFX CREATOR COMMAND CENTER -->
+<section id="studio-dashboard" class="studio-dashboard">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">SOURAJIT VFX · WORKSPACE</span>
+      <h2 class="section-title">Creator <span class="grad">Command Center.</span></h2>
+      <p class="section-desc">One place for projects, experiments and creator tools. Live projects open directly; imported tool sources stay gated until ownership, API and privacy checks are complete.</p>
+    </div>
+
+    <div class="studio-overview reveal">
+      <div class="studio-overview-copy">
+        <span class="studio-live-dot"></span><span>WORKSPACE OVERVIEW</span>
+        <h3>Build. Create. Ship.</h3>
+        <p>Your project launcher for web apps, bots, APIs and creative utilities.</p>
+      </div>
+      <div class="studio-stats">
+        <div><strong>06</strong><span>Core projects</span></div>
+        <div><strong>22</strong><span>Imported tools audited</span></div>
+        <div><strong>01</strong><span>Unified workspace</span></div>
+      </div>
+    </div>
+
+    <div class="studio-toolbar reveal">
+      <label class="studio-search"><span aria-hidden="true">⌕</span><input id="studioSearch" type="search" placeholder="Search projects and tools..." aria-label="Search projects and tools"></label>
+      <div class="studio-filters" role="group" aria-label="Filter workspace items">
+        <button class="studio-filter active" data-studio-filter="all" type="button">All</button>
+        <button class="studio-filter" data-studio-filter="projects" type="button">Projects</button>
+        <button class="studio-filter" data-studio-filter="web" type="button">Web apps</button>
+        <button class="studio-filter" data-studio-filter="bots" type="button">Bots & APIs</button>
+        <button class="studio-filter" data-studio-filter="tools" type="button">Tools</button>
+      </div>
+    </div>
+
+    <div class="studio-group-head"><div><span class="eyebrow">FEATURED WORK</span><h3>My projects</h3></div><span class="studio-count">6 PROJECTS</span></div>
+    <div class="studio-grid" id="studioProjectGrid">
+      <article class="studio-card" data-studio-kind="projects web" data-search="sourajitvfx portfolio personal website github source">
+        <div class="studio-card-top"><span class="studio-icon">✦</span><span class="studio-status is-live">LIVE</span></div>
+        <h4>SOURAJITVFX Portfolio</h4><p>Personal hub for my creative work, developer journey, experiments and projects.</p>
+        <div class="studio-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="studio-actions"><a href="https://sourajitvfx.vercel.app/" target="_blank" rel="noopener noreferrer">Open website ↗</a><a href="https://github.com/Rdx690/sourajitvfx-portfolio" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+      </article>
+      <article class="studio-card" data-studio-kind="projects bots" data-search="vfx mini telegram bot node telegraf">
+        <div class="studio-card-top"><span class="studio-icon">⌘</span><span class="studio-status is-build">IN DEVELOPMENT</span></div>
+        <h4>VFX MINI</h4><p>Telegram bot workspace for commands, uptime, ping, admin tools and supported media features.</p>
+        <div class="studio-tags"><span>Node.js</span><span>Telegraf</span><span>Telegram</span></div>
+        <div class="studio-actions"><span class="studio-no-link">Project overview</span></div>
+      </article>
+      <article class="studio-card" data-studio-kind="projects web" data-search="sourajit vfx ai lovable artificial intelligence">
+        <div class="studio-card-top"><span class="studio-icon">✧</span><span class="studio-status is-live">LIVE</span></div>
+        <h4>SOURAJIT VFX AI</h4><p>AI-powered web experience in the Sourajit VFX project family.</p>
+        <div class="studio-tags"><span>AI</span><span>Web app</span><span>Lovable</span></div>
+        <div class="studio-actions"><a href="https://sourajitvfxai.lovable.app" target="_blank" rel="noopener noreferrer">Open AI app ↗</a></div>
+      </article>
+      <article class="studio-card" data-studio-kind="projects web" data-search="music vault x music player streaming playlist">
+        <div class="studio-card-top"><span class="studio-icon">♫</span><span class="studio-status is-concept">CONCEPT</span></div>
+        <h4>Music Vault X</h4><p>Music discovery and player concept with search, playlists, artwork and playback experiences.</p>
+        <div class="studio-tags"><span>JavaScript</span><span>Audio</span><span>REST API</span></div>
+        <div class="studio-actions"><span class="studio-no-link">Project concept</span></div>
+      </article>
+      <article class="studio-card" data-studio-kind="projects web" data-search="vfx music vault streaming music ui">
+        <div class="studio-card-top"><span class="studio-icon">◉</span><span class="studio-status is-build">IN DEVELOPMENT</span></div>
+        <h4>VFX Music Vault</h4><p>Visual music experience focused on a polished player interface and discovery flow.</p>
+        <div class="studio-tags"><span>UI/UX</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="studio-actions"><span class="studio-no-link">Project overview</span></div>
+      </article>
+      <article class="studio-card" data-studio-kind="projects bots" data-search="vfx downloader api media flask ffmpeg">
+        <div class="studio-card-top"><span class="studio-icon">⇩</span><span class="studio-status is-build">IN DEVELOPMENT</span></div>
+        <h4>VFX Downloader</h4><p>Media utility API project for supported links and audio conversion workflows.</p>
+        <div class="studio-tags"><span>Python</span><span>Flask</span><span>FFmpeg</span></div>
+        <div class="studio-actions"><a href="https://vfxsave.onrender.com" target="_blank" rel="noopener noreferrer">Open API ↗</a><a href="https://github.com/Rdx690/VFX-DOWNLOADR" target="_blank" rel="noopener noreferrer">Source ↗</a></div>
+      </article>
+    </div>
+
+    <div class="studio-group-head studio-tools-head"><div><span class="eyebrow">IMPORTED TOOLKIT</span><h3>22 tool modules</h3><p>Catalogued from the uploaded archive. Launch is disabled until each source is authorized and audited.</p></div><span class="studio-count">22 MODULES</span></div>
+    <div class="studio-grid" id="studioToolsGrid">
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="background remover bg remover image png">
+        <div class="studio-card-top"><span class="studio-icon">◌</span><span class="studio-status is-review">API KEY REVIEW</span></div><h4>Background Remover</h4><p>Image background removal and transparent PNG export.</p><div class="studio-tags"><span>Image</span><span>External API</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · review needed</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="capcut saver downloader">
+        <div class="studio-card-top"><span class="studio-icon">▣</span><span class="studio-status is-review">SOURCE REVIEW</span></div><h4>CapCut Saver</h4><p>CapCut link processing utility.</p><div class="studio-tags"><span>Media</span><span>External API</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · review needed</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="code decrypter encoder decoder base64">
+        <div class="studio-card-top"><span class="studio-icon">⌘</span><span class="studio-status is-locked">CODE EXECUTION REVIEW</span></div><h4>Code Decrypter Pro</h4><p>Code encoding and decoding utility. Dynamic code execution needs isolation.</p><div class="studio-tags"><span>Developer</span><span>Security review</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · security review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="dp downloader profile picture">
+        <div class="studio-card-top"><span class="studio-icon">◎</span><span class="studio-status is-review">SOURCE REVIEW</span></div><h4>DP Downloader</h4><p>Profile picture lookup and download interface.</p><div class="studio-tags"><span>Image</span><span>External API</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · review needed</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="html boss encrypt html code">
+        <div class="studio-card-top"><span class="studio-icon">⌬</span><span class="studio-status is-locked">CODE EXECUTION REVIEW</span></div><h4>HTML Boss</h4><p>HTML utility with dynamic code handling; requires sandboxing before public use.</p><div class="studio-tags"><span>Developer</span><span>Security review</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · security review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="image to link imgbb upload">
+        <div class="studio-card-top"><span class="studio-icon">↗</span><span class="studio-status is-review">API REVIEW</span></div><h4>Image to Link</h4><p>Image hosting and shareable link generator.</p><div class="studio-tags"><span>Image</span><span>Upload API</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · review needed</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="image resize compressor">
+        <div class="studio-card-top"><span class="studio-icon">▧</span><span class="studio-status is-review">SOURCE REVIEW</span></div><h4>Image Resizer</h4><p>Resize and compress images for web and social content.</p><div class="studio-tags"><span>Image</span><span>Browser utility</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · source review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="instagram saver reels downloader">
+        <div class="studio-card-top"><span class="studio-icon">◎</span><span class="studio-status is-review">API REVIEW</span></div><h4>Instagram Saver</h4><p>Instagram media link utility; external API and platform compliance review required.</p><div class="studio-tags"><span>Social</span><span>External API</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · review needed</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="url locker link locker qr">
+        <div class="studio-card-top"><span class="studio-icon">▣</span><span class="studio-status is-review">SOURCE REVIEW</span></div><h4>Link Locker</h4><p>Password-protected URL and QR utility. Storage and access controls need review.</p><div class="studio-tags"><span>Security</span><span>URL tools</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · review needed</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="ludo game">
+        <div class="studio-card-top"><span class="studio-icon">⚄</span><span class="studio-status is-review">SOURCE REVIEW</span></div><h4>Ludo</h4><p>Browser-based Ludo game interface.</p><div class="studio-tags"><span>Game</span><span>Browser app</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · source review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="mobile info phone specifications">
+        <div class="studio-card-top"><span class="studio-icon">▯</span><span class="studio-status is-review">API REVIEW</span></div><h4>Mobile Info</h4><p>Mobile device information lookup interface.</p><div class="studio-tags"><span>Lookup</span><span>External API</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · review needed</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="post maker social media design">
+        <div class="studio-card-top"><span class="studio-icon">▤</span><span class="studio-status is-review">SOURCE REVIEW</span></div><h4>Post Maker</h4><p>Create social post graphics and export share-ready designs.</p><div class="studio-tags"><span>Design</span><span>Creator tool</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · source review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="sim db phone cnic lookup">
+        <div class="studio-card-top"><span class="studio-icon">⛨</span><span class="studio-status is-locked">PRIVACY BLOCKED</span></div><h4>SIM DB</h4><p>Phone-number or identity-record lookup is excluded from public deployment due to privacy risks.</p><div class="studio-tags"><span>Privacy</span><span>Not publishable</span></div><div class="studio-actions"><span class="studio-no-link">Disabled · privacy protection</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="source code hub firebase">
+        <div class="studio-card-top"><span class="studio-icon">⌘</span><span class="studio-status is-locked">CREDENTIAL REVIEW</span></div><h4>Source Code Hub</h4><p>Code library interface. Firebase configuration and access rules must be checked.</p><div class="studio-tags"><span>Developer</span><span>Firebase</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · credential review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="tiktok saver video downloader">
+        <div class="studio-card-top"><span class="studio-icon">♪</span><span class="studio-status is-review">API REVIEW</span></div><h4>TikTok Saver</h4><p>TikTok link processing; external services and usage compliance need review.</p><div class="studio-tags"><span>Social</span><span>External API</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · review needed</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="temporary email tmail inbox">
+        <div class="studio-card-top"><span class="studio-icon">✉</span><span class="studio-status is-locked">PRIVACY REVIEW</span></div><h4>T-Mail</h4><p>Temporary email inbox interface. Data retention and privacy behavior need review.</p><div class="studio-tags"><span>Email</span><span>Privacy</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · privacy review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="toolkit generator build">
+        <div class="studio-card-top"><span class="studio-icon">✧</span><span class="studio-status is-review">SOURCE REVIEW</span></div><h4>Toolkit Generator</h4><p>Generate a starter toolkit or project interface.</p><div class="studio-tags"><span>Builder</span><span>Developer</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · source review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="truecaller caller intelligence phone lookup">
+        <div class="studio-card-top"><span class="studio-icon">⛨</span><span class="studio-status is-locked">PRIVACY BLOCKED</span></div><h4>Caller Intelligence</h4><p>Caller identity lookup can expose personal data; not enabled in the public dashboard.</p><div class="studio-tags"><span>Privacy</span><span>Not publishable</span></div><div class="studio-actions"><span class="studio-no-link">Disabled · privacy protection</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="video to audio converter mp3">
+        <div class="studio-card-top"><span class="studio-icon">♫</span><span class="studio-status is-review">SOURCE REVIEW</span></div><h4>Video to Audio</h4><p>Convert user-selected video files into audio in the browser.</p><div class="studio-tags"><span>Media</span><span>Converter</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · source review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools" data-search="web cloner website source code fetcher">
+        <div class="studio-card-top"><span class="studio-icon">⌘</span><span class="studio-status is-locked">SECURITY REVIEW</span></div><h4>Web Cloner</h4><p>Website fetching and source preview need SSRF, origin and abuse protections.</p><div class="studio-tags"><span>Developer</span><span>Network security</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · security review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="youtube thumbnail downloader">
+        <div class="studio-card-top"><span class="studio-icon">▶</span><span class="studio-status is-review">SOURCE REVIEW</span></div><h4>YouTube Thumbnail</h4><p>Fetch and download available thumbnail image sizes from a YouTube video URL.</p><div class="studio-tags"><span>YouTube</span><span>Image</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · source review</span></div>
+      </article>
+      <article class="studio-card studio-tool-card" data-studio-kind="tools web" data-search="youtube stalker channel analytics">
+        <div class="studio-card-top"><span class="studio-icon">◉</span><span class="studio-status is-review">API REVIEW</span></div><h4>YouTube Analytics</h4><p>Public channel and video analytics interface; API behavior needs verification.</p><div class="studio-tags"><span>YouTube</span><span>Analytics</span></div><div class="studio-actions"><span class="studio-no-link">Launch locked · API review</span></div>
+      </article>
+    </div>
+    <p class="studio-footnote">Security note: imported archive files are catalogued, not copied into the public site. Only tools with confirmed ownership, safe code, valid API configuration and privacy-compliant behavior will be enabled.</p>
   </div>
 </section>
 
@@ -2045,5 +2242,28 @@ section{scroll-margin-top:5.5rem}
 
 })();
 </script>
-</body>
+<script>\n
+// Creator Command Center search and filters
+(function(){
+  const search=document.getElementById('studioSearch');
+  const cards=[...document.querySelectorAll('#studio-dashboard .studio-card')];
+  const filters=[...document.querySelectorAll('.studio-filter')];
+  let active='all';
+  function apply(){
+    const q=(search?.value||'').trim().toLowerCase();
+    cards.forEach(card=>{
+      const kind=(card.dataset.studioKind||'').split(/\\s+/);
+      const hay=(card.dataset.search+' '+card.innerText).toLowerCase();
+      const category=active==='all'||kind.includes(active)||(active==='web'&&kind.includes('web'))||(active==='bots'&&kind.includes('bots'));
+      card.hidden=!(category&&hay.includes(q));
+    });
+  }
+  filters.forEach(btn=>btn.addEventListener('click',()=>{
+    active=btn.dataset.studioFilter;
+    filters.forEach(b=>{const on=b===btn;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
+    apply();
+  }));
+  search?.addEventListener('input',apply);
+})();
+\n</script>\n</body>
 </html>
