@@ -2648,5 +2648,57 @@ footer a{color:#356fc4!important}
   <a href="#skills" aria-label="Skills"><span>▤</span><small>Skills</small></a>
   <a href="#contact" aria-label="Contact"><span>♙</span><small>Contact</small></a>
 </nav>
+
+<style id="sourajitvfx-premium-ui">
+/* SOURAJITVFX premium interaction layer */
+:root{--ui-ease:cubic-bezier(.2,.75,.25,1)}
+.btn,.filter-btn,.nav-toggle,.brand-mark,.hero-socials a,.mobile-menu a,.spotlight-primary,.spotlight-secondary{
+  position:relative;isolation:isolate;overflow:hidden;transform:translateZ(0);
+}
+.btn,.filter-btn,.spotlight-primary,.spotlight-secondary{
+  transition:transform .28s var(--ui-ease),box-shadow .35s,border-color .3s,background .3s,color .3s,filter .3s;
+}
+.btn{border-radius:14px;min-height:44px}
+.btn-primary{
+  color:#07101c;background:linear-gradient(115deg,#67e8f9 0%,#8b5cf6 52%,#d946ef 100%);
+  background-size:180% 180%;box-shadow:0 9px 28px -12px #8b5cf6cc, inset 0 1px 0 #ffffff80;
+  animation:ui-gradient-drift 7s ease infinite;
+}
+.btn-primary:before,.spotlight-primary:before{
+  content:"";position:absolute;inset:-2px;z-index:-1;transform:translateX(-130%) skewX(-18deg);
+  background:linear-gradient(100deg,transparent 25%,#ffffff88 50%,transparent 75%);
+  transition:transform .7s var(--ui-ease);pointer-events:none
+}
+.btn-primary:hover:before,.spotlight-primary:hover:before{transform:translateX(130%) skewX(-18deg)}
+.btn-primary:hover{transform:translateY(-4px) scale(1.025);filter:saturate(1.15);box-shadow:0 16px 42px -12px #8b5cf6dd,0 0 0 1px #a5f3fc66}
+.btn-ghost,.btn-github{background:linear-gradient(135deg,#ffffff0d,#8b5cf61a);border-color:#8b9bd84d;backdrop-filter:blur(12px)}
+.btn-ghost:hover,.btn-github:hover{transform:translateY(-3px);background:#22d3ee18;border-color:#67e8f9;box-shadow:0 12px 30px -16px #22d3eeaa, inset 0 0 18px #22d3ee0d}
+.btn:active,.filter-btn:active,.spotlight-primary:active,.spotlight-secondary:active{transform:translateY(1px) scale(.97)}
+.btn:focus-visible,.filter-btn:focus-visible,.nav-toggle:focus-visible,a:focus-visible{outline:2px solid #67e8f9;outline-offset:4px}
+.filter-btn{border-radius:999px;padding:10px 19px;background:linear-gradient(135deg,#ffffff0b,#8b5cf614);backdrop-filter:blur(10px)}
+.filter-btn:hover{transform:translateY(-2px);border-color:#67e8f9;color:#fff;box-shadow:0 8px 22px -15px #22d3ee}
+.filter-btn.active{background:linear-gradient(110deg,#67e8f9,#8b5cf6 65%,#d946ef);box-shadow:0 9px 28px -10px #8b5cf6cc,inset 0 1px #ffffff80}
+.nav-links a{transition:color .25s,background .25s,transform .25s}
+.nav-links a:hover{transform:translateY(-2px)}
+.nav-toggle{border-radius:14px;transition:background .25s,border-color .25s,transform .25s}
+.nav-toggle:hover{background:#22d3ee18;border-color:#67e8f9;transform:scale(1.04)}
+.hero-socials a{transition:transform .3s var(--ui-ease),box-shadow .3s,border-color .3s}
+.hero-socials a:hover{transform:translateY(-5px) rotate(-5deg);border-color:#67e8f9;box-shadow:0 9px 25px -12px #22d3ee}
+.project-card{transition:transform .45s var(--ui-ease),border-color .35s,box-shadow .45s}
+.project-card:hover{transform:translateY(-9px) scale(1.012);border-color:#8b5cf6aa;box-shadow:0 28px 70px -30px #6366f1aa,0 0 0 1px #22d3ee22}
+.project-visual svg{transition:transform .7s var(--ui-ease),filter .5s}
+.project-card:hover .project-visual svg{transform:scale(1.045);filter:saturate(1.18)}
+.spotlight-primary,.spotlight-secondary{border-radius:14px;transition:all .3s var(--ui-ease)}
+.spotlight-primary:hover,.spotlight-secondary:hover{transform:translateY(-3px);box-shadow:0 12px 28px -14px #8b5cf6cc}
+.mobile-menu a{transition:background .25s,color .25s,transform .25s}
+.mobile-menu a:hover{transform:translateX(5px);background:#22d3ee12;color:#67e8f9}
+@keyframes ui-gradient-drift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media(hover:none){.btn-primary:hover,.btn-ghost:hover,.btn-github:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){
+  .btn,.filter-btn,.project-card,.project-visual svg,.hero-socials a,.nav-links a,.mobile-menu a{transition:none!important;animation:none!important}
+  .btn-primary{animation:none}
+}
+</style>
+
 </body>
 </html>
