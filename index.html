@@ -896,6 +896,15 @@ section{scroll-margin-top:5.5rem}
  @keyframes rise-in{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Exact user-supplied cinematic opening artwork */
+#intro{padding:0!important;gap:0!important;background:#03050b!important;overflow:hidden!important}
+#intro .intro-art{position:absolute!important;inset:0!important;z-index:1!important;background:#03050b!important}
+#intro .intro-art img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;opacity:1!important;filter:none!important;transform:none!important;animation:introArtworkReveal 1.25s ease-out both!important}
+#intro .intro-art::after,#intro .intro-art-grid{display:none!important}
+#intro>*:not(.intro-art){display:none!important}
+@keyframes introArtworkReveal{from{opacity:0;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
+@media(max-aspect-ratio:4/5){#intro .intro-art img{object-fit:contain!important;background:#03050b!important}}
 </style>
 </head>
 <body>
@@ -903,27 +912,8 @@ section{scroll-margin-top:5.5rem}
 <!-- CINEMATIC INTRO OVERLAY -->
 <div id="intro" aria-hidden="true">
   <div class="intro-art" aria-hidden="true">
-    <!-- Portrait intentionally omitted until the real image file is uploaded. -->
-    <div class="intro-art-grid"></div>
+    <img src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/c95c33ed-8452-4385-ac98-71dafd2b3d4e.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNDVlNjU4ZDVhODYzZjQwMyIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MzUwNzkyNX0.l8jZ4ba74PvwSAJzcPufY5P2xrp9XTcKbBQSPL1Zd3c" alt="Sourajit VFX cinematic portfolio opening artwork" fetchpriority="high">
   </div>
-
-  <div class="mono-wrap intro-avatar-wrap">
-    <div class="intro-avatar-fallback" aria-label="Sourajit profile placeholder">S</div>
-    <svg viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <defs><linearGradient id="ig" x1="0" y1="0" x2="130" y2="130" gradientUnits="userSpaceOnUse"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
-      <circle class="ring" cx="65" cy="65" r="52" stroke="url(#ig)" stroke-width="2" opacity=".95"/>
-      <circle class="ring2" cx="65" cy="65" r="42" stroke="url(#ig)" stroke-width="1.5" opacity=".8"/>
-    </svg>
-  </div>
-  <div class="intro-title">SOURAJITVFX</div>
-  <div class="intro-sub">CREATIVE DEVELOPER <span>·</span> DIGITAL BUILDER</div>
-  <p class="intro-tagline">Turning ideas into digital experiences.</p>
-  <div class="intro-project-links">
-    <a class="intro-project-primary" href="https://github.com/Rdx690/VFX-MINI" target="_blank" rel="noopener noreferrer">Explore VFX MINI <span aria-hidden="true">↗</span></a>
-    <a class="intro-project-secondary" href="https://github.com/Rdx690/sourajitvfx-portfolio" target="_blank" rel="noopener noreferrer">View Portfolio Source <span aria-hidden="true">↗</span></a>
-  </div>
-
-  <div class="intro-footnote">BUILT WITH CURIOSITY · POWERED BY SOURAJIT</div>
 </div>
 
 <!-- BG FX -->
