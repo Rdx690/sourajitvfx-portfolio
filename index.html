@@ -1548,14 +1548,27 @@ footer a{color:#356fc4!important}
 @media(prefers-reduced-motion:reduce){.sj-live-dot,.sj-profile-photo-wrapper:before{animation:none}}
 </style>
 
+<style id="sourajitvfx-opening-screen-repair-2026">
+/* Reliable cinematic opening screen without an expired external artwork URL */
+#intro .intro-art{
+ background:radial-gradient(ellipse at 50% 43%,rgba(20,42,100,.62),transparent 38%),radial-gradient(ellipse at 18% 22%,rgba(0,210,255,.20),transparent 38%),radial-gradient(ellipse at 82% 78%,rgba(183,54,255,.22),transparent 42%),linear-gradient(145deg,#050916 0%,#080b20 48%,#100822 100%)!important;
+}
+#intro .intro-art:before{
+ content:"";position:absolute;width:min(76vw,520px);aspect-ratio:1;left:50%;top:43%;transform:translate(-50%,-50%);border-radius:50%;border:2px solid rgba(44,213,255,.52);box-shadow:0 0 0 12px rgba(58,111,255,.09),0 0 0 26px rgba(179,57,255,.08),0 0 45px rgba(0,207,255,.25),inset 0 0 55px rgba(135,62,255,.16);animation:openingRingPulse 5s ease-in-out infinite;
+}
+#intro .intro-art:after{
+ content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(4,5,12,.18),rgba(4,5,12,.72)),radial-gradient(ellipse at center,transparent 20%,rgba(2,5,15,.42) 100%)!important;
+}
+#intro .intro-brand-lockup img{object-fit:cover!important;image-rendering:auto;box-shadow:0 0 0 5px rgba(139,92,246,.2),0 0 38px rgba(34,211,238,.48)!important}
+@keyframes openingRingPulse{0%,100%{opacity:.7;filter:brightness(.9)}50%{opacity:1;filter:brightness(1.35)}}
+@media(prefers-reduced-motion:reduce){#intro .intro-art:before{animation:none}}
+</style>
 </head>
 <body>
 
 <!-- CINEMATIC INTRO OVERLAY -->
 <div id="intro" aria-hidden="true">
-  <div class="intro-art" aria-hidden="true">
-    <img src="https://d2jqrm6oza8nb6.cloudfront.net/datasets/c95c33ed-8452-4385-ac98-71dafd2b3d4e.png?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiNDVlNjU4ZDVhODYzZjQwMyIsImJ1Y2tldCI6InJ1bndheS1kYXRhc2V0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MzUwNzkyNX0.l8jZ4ba74PvwSAJzcPufY5P2xrp9XTcKbBQSPL1Zd3c" alt="Sourajit VFX cinematic portfolio opening artwork" fetchpriority="high">
-  </div>
+  <div class="intro-art" aria-hidden="true"><div class="intro-art-glow"></div></div>
   <div class="intro-brand-lockup" aria-label="SOURAJITVFX">
     <img src="/favicon.jpg?v=20261101" alt="" width="68" height="68" />
     <span>SOURAJIT<span>VFX</span></span>
