@@ -3000,5 +3000,22 @@ body{background-color:var(--premium-ink)!important;letter-spacing:.005em}
 }
 @media(prefers-reduced-motion:reduce){.hero h1 .grad{animation:none!important}}
 </style>
+
+<style id="sourajitvfx-logo-navbar-cleanup">
+/* Clean mobile header and prevent the stray white nav tile */
+@media(max-width:900px){
+  #navbar .nav-inner{display:flex!important;align-items:center!important;gap:12px!important}
+  #navbar nav,#navbar .nav-links{display:none!important}
+  #navbar .nav-actions{margin-left:auto!important;display:flex!important;align-items:center!important;gap:10px!important}
+  #navbar .nav-actions>*:empty{display:none!important}
+  #navbar .nav-toggle{display:flex!important;width:46px!important;height:46px!important;min-width:46px!important;background:rgba(12,18,38,.94)!important;border:1px solid rgba(103,232,249,.32)!important;border-radius:14px!important;box-shadow:0 0 18px rgba(34,211,238,.12)!important}
+  #navbar .nav-toggle span{background:linear-gradient(90deg,#67e8f9,#c084fc)!important}
+  #navbar .brand-mark{width:46px!important;height:46px!important;border-radius:14px!important;overflow:hidden!important;box-shadow:0 0 18px rgba(34,211,238,.2)!important}
+  #navbar .brand-mark svg{width:25px!important;height:25px!important}
+  #navbar .brand-word{letter-spacing:.07em!important}
+}
+.mobile-glass-dock a.dock-core{overflow:hidden!important;isolation:isolate!important}
+.mobile-glass-dock a.dock-core img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;border-radius:50%!important;image-rendering:auto!important;transform:translateZ(0)!important}
+</style>
 </body>
 </html>
