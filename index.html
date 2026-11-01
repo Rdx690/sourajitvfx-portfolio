@@ -2903,5 +2903,22 @@ body{font-family:'Inter',sans-serif!important}
 }
 @media(prefers-reduced-motion:reduce){.hero h1 .grad{filter:none!important}}
 </style>
+
+<style id="sourajitvfx-profile-first-image-lower">
+/* Mobile composition: show identity and details before the hero artwork */
+@media(max-width:700px){
+ .hero-grid{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:24px!important}
+ .hero-left,.hero-content{order:1!important;width:100%!important}
+ .hero-visual,.hero-portrait-visual{order:2!important;width:100%!important;max-width:560px!important;margin:8px auto 0!important}
+ .hero-portrait-visual{min-height:0!important;padding:14px!important;border-radius:28px!important}
+ .portrait-frame{width:100%!important;height:auto!important;aspect-ratio:1/1!important;max-width:500px!important;margin:0 auto!important;mask-image:none!important;-webkit-mask-image:none!important;overflow:hidden!important;border-radius:50%!important}
+ .hero-portrait{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;image-rendering:auto!important;-webkit-transform:translateZ(0);transform:translateZ(0)}
+ .portrait-brand-overlay{width:min(88%,420px)!important;max-width:88%!important;height:auto!important;object-fit:contain!important;image-rendering:auto!important;-webkit-transform:translateZ(0);transform:translateZ(0)}
+ .hero-profile{margin-top:4px!important;margin-bottom:18px!important}
+ .hero-status{margin-bottom:18px!important}
+ .hero h1{margin-top:8px!important}
+}
+@media(min-width:701px){.hero-left{order:1}.hero-visual{order:2}}
+</style>
 </body>
 </html>
