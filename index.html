@@ -3017,5 +3017,71 @@ body{background-color:var(--premium-ink)!important;letter-spacing:.005em}
 .mobile-glass-dock a.dock-core{overflow:hidden!important;isolation:isolate!important}
 .mobile-glass-dock a.dock-core img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;border-radius:50%!important;image-rendering:auto!important;transform:translateZ(0)!important}
 </style>
+
+<style id="sourajitvfx-premium-bottom-dock">
+/* Premium floating bottom dock — dark glass, crisp icons, luminous center logo */
+@media(max-width:700px){
+ body{padding-bottom:116px!important}
+ .mobile-glass-dock{
+  left:12px!important;right:12px!important;bottom:max(12px,env(safe-area-inset-bottom))!important;
+  min-height:76px!important;padding:9px 10px!important;gap:5px!important;
+  display:flex!important;align-items:center!important;justify-content:space-around!important;
+  border:1px solid rgba(114,190,255,.28)!important;border-radius:26px!important;
+  background:linear-gradient(135deg,rgba(8,15,34,.96),rgba(13,22,46,.94) 55%,rgba(23,13,48,.96))!important;
+  backdrop-filter:blur(26px) saturate(165%)!important;-webkit-backdrop-filter:blur(26px) saturate(165%)!important;
+  box-shadow:0 18px 48px rgba(0,0,0,.48),0 0 28px rgba(44,116,255,.15),inset 0 1px rgba(255,255,255,.09)!important;
+ }
+ .mobile-glass-dock:before{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;
+  background:linear-gradient(110deg,rgba(34,211,238,.55),rgba(139,92,246,.42),rgba(236,72,153,.38),rgba(34,211,238,.55));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;opacity:.8
+ }
+ .mobile-glass-dock a:not(.dock-core){
+  position:relative;flex:1!important;min-width:0!important;min-height:54px!important;
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+  gap:5px!important;padding:5px 2px!important;border-radius:16px!important;color:#8d9bb8!important;
+  transition:color .25s ease,background .25s ease,transform .25s ease!important
+ }
+ .mobile-glass-dock a:not(.dock-core)>span{
+  display:grid!important;place-items:center!important;width:25px!important;height:25px!important;
+  font:700 1.35rem/1 system-ui!important;color:inherit!important;
+  filter:drop-shadow(0 0 7px currentColor)!important
+ }
+ .mobile-glass-dock a:not(.dock-core) small{
+  font:700 .58rem/1.15 'Orbitron',system-ui,sans-serif!important;letter-spacing:.07em!important;
+  text-transform:uppercase!important;color:inherit!important
+ }
+ .mobile-glass-dock a:not(.dock-core):hover,
+ .mobile-glass-dock a:not(.dock-core):focus-visible{
+  color:#7cecff!important;background:rgba(34,211,238,.09)!important;transform:translateY(-2px)!important
+ }
+ .mobile-glass-dock a.dock-youtube-link .dock-youtube{
+  width:34px!important;height:25px!important;display:grid!important;place-items:center!important;
+  border-radius:8px!important;background:linear-gradient(145deg,#ff3154,#d90035)!important;
+  color:#fff!important;box-shadow:0 4px 14px rgba(255,0,65,.28)!important
+ }
+ .mobile-glass-dock a.dock-youtube-link .dock-youtube svg{width:17px!important;height:17px!important}
+ .mobile-glass-dock a.dock-core{
+  position:relative!important;z-index:2!important;flex:0 0 64px!important;width:64px!important;height:64px!important;
+  min-width:64px!important;margin-top:-27px!important;padding:3px!important;border-radius:50%!important;
+  overflow:hidden!important;background:linear-gradient(145deg,#091326,#1a1740)!important;
+  border:2px solid #e8faff!important;
+  box-shadow:0 0 0 3px rgba(95,225,255,.22),0 0 22px rgba(75,190,255,.38),0 8px 20px rgba(0,0,0,.42)!important
+ }
+ .mobile-glass-dock a.dock-core:after{
+  content:"";position:absolute;inset:-3px;border-radius:50%;padding:2px;pointer-events:none;
+  background:conic-gradient(from 0deg,#22d3ee,#8b5cf6,#ec4899,#22d3ee);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;animation:vfxDockRing 7s linear infinite
+ }
+ .mobile-glass-dock a.dock-core img{
+  width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;
+  border-radius:50%!important;display:block!important;filter:none!important
+ }
+}
+@keyframes vfxDockRing{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.mobile-glass-dock a.dock-core:after{animation:none!important}}
+</style>
 </body>
 </html>
