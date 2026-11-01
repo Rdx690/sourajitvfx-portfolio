@@ -1520,6 +1520,34 @@ footer a{color:#356fc4!important}
 @media(prefers-reduced-motion:reduce){.hero-logo-image,.logo-code,.logo-play,.status-dot{animation:none}}
 </style>
 
+<style id="sj-profile-section-2026">
+.sj-profile{width:100%;max-width:750px;margin:0 auto 26px;padding:32px;box-sizing:border-box;overflow:hidden;border-radius:32px;color:#eaf3ff;background:radial-gradient(circle at 90% 5%,rgba(118,44,255,.25),transparent 40%),radial-gradient(circle at 5% 50%,rgba(0,217,255,.15),transparent 45%),linear-gradient(145deg,#070e20,#080b1c 75%);border:1px solid rgba(92,157,206,.4);box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 40px rgba(20,123,255,.15);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.sj-profile-header{display:flex;align-items:center;gap:25px;padding:24px;border-radius:28px;background:linear-gradient(120deg,rgba(18,51,84,.8),rgba(37,22,66,.8));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(112,207,255,.4);box-shadow:inset 0 0 30px rgba(123,76,255,.15)}
+.sj-profile-photo-wrapper{position:relative;width:130px;height:130px;flex-shrink:0;display:grid;place-items:center}
+.sj-profile-photo-wrapper:before{content:'';position:absolute;inset:-6px;border-radius:50%;background:conic-gradient(from 0deg,#00d9ff,#a855f7,#35e8ae,#00d9ff);animation:sjRotateRing 4s linear infinite;z-index:1}
+.sj-profile-photo{position:relative;z-index:2;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:50%;border:4px solid #080b1c;box-shadow:0 0 25px rgba(0,217,255,.5),inset 0 0 15px rgba(168,85,247,.4);transition:transform .4s ease,filter .4s ease}
+.sj-profile-photo-wrapper:hover .sj-profile-photo{transform:scale(1.05);filter:brightness(1.1)}
+.sj-profile-info{min-width:0}.sj-profile-info small{color:#71eaff;font-family:monospace;letter-spacing:4px;font-size:13px;font-weight:bold}
+.sj-profile-info h2{margin:8px 0;font-size:clamp(24px,5vw,38px);font-weight:900;color:white;letter-spacing:-.5px;line-height:1.15}
+.sj-profile-info h2 span{background:linear-gradient(90deg,#40eaff,#a78bfa);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sj-profile-info p{margin:0;color:#c1d0e9;font-size:15px;line-height:1.5;font-weight:500}
+.sj-learning{display:inline-flex;align-items:center;gap:12px;margin:30px 0 25px;padding:14px 24px;border:1px solid rgba(55,217,255,.4);border-radius:50px;background:linear-gradient(100deg,rgba(12,52,73,.8),rgba(36,22,60,.8));color:#6de7ff;font-family:monospace;font-weight:bold;letter-spacing:1.5px;font-size:13px;box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.sj-live-dot{width:10px;height:10px;flex:0 0 10px;border-radius:50%;background:#35e8ae;box-shadow:0 0 15px #35e8ae;animation:sjBlink 1.5s infinite}
+.sj-intro-label{color:#c084fc;font-family:monospace;font-size:16px;font-weight:bold;letter-spacing:5px;text-shadow:0 0 18px rgba(168,85,247,.7);margin-bottom:18px}
+.sj-intro-title{margin:0;font-size:clamp(44px,10vw,85px);line-height:.98;font-weight:950;letter-spacing:-3px}
+.sj-intro-title .digital{display:block;color:#1a2744;-webkit-text-stroke:1.5px rgba(255,255,255,.15)}
+.sj-intro-title .reality{display:block;padding-bottom:12px;background:linear-gradient(90deg,#32e4ff,#568cff,#a56cff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sj-intro-description{margin-top:28px;color:#a9bad6;font-size:clamp(15px,3.2vw,21px);line-height:1.85}
+.sj-intro-description strong{color:#e4f5ff}
+.sj-profile-tags{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.sj-profile-tags span{padding:10px 18px;border-radius:14px;color:#bdefff;background:rgba(16,38,64,.7);border:1px solid rgba(54,207,255,.3);font-family:monospace;font-size:13px;font-weight:bold;transition:all .3s ease}
+.sj-profile-tags span:hover{background:rgba(34,211,238,.2);border-color:#22d3ee;transform:translateY(-3px);box-shadow:0 8px 20px rgba(34,211,238,.2)}
+@keyframes sjRotateRing{to{transform:rotate(360deg)}}
+@keyframes sjBlink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.85)}}
+@media(max-width:520px){.sj-profile{padding:18px;border-radius:24px}.sj-profile-header{padding:16px;gap:16px;border-radius:20px}.sj-profile-photo-wrapper{width:85px;height:85px}.sj-profile-info small{font-size:10px;letter-spacing:2px}.sj-profile-info p{font-size:12px}.sj-learning{margin:20px 0;padding:10px 16px;font-size:11px;letter-spacing:.8px}.sj-intro-label{font-size:12px;letter-spacing:3px}.sj-intro-title{letter-spacing:-1px}.sj-intro-description{margin-top:18px;line-height:1.7}}
+@media(prefers-reduced-motion:reduce){.sj-live-dot,.sj-profile-photo-wrapper:before{animation:none}}
+</style>
+
 </head>
 <body>
 
@@ -1599,14 +1627,27 @@ footer a{color:#356fc4!important}
   <div class="container">
     <div class="hero-grid">
       <div class="hero-left">
-        <div class="hero-profile">
-          <div class="hero-avatar-fallback" role="img" aria-label="Sourajit profile">S</div>
-          <div class="hero-profile-copy"><span class="hero-profile-kicker">PORTFOLIO · 2026</span><strong>SOURAJIT <span>VFX</span></strong><small>Developer · Bot Builder · Creative Explorer</small></div>
-        </div>
-        <div class="hero-status"><span class="dot"></span><span>Currently learning &amp; building</span></div>
-        <div class="hero-kicker">BUILDING IDEAS INTO</div>
-        <h1>digital <span class="grad">reality.</span></h1>
-        <p class="hero-desc">I'm Sourajit — an aspiring developer from Tripura, India, exploring bots, web applications, APIs, and creative digital experiences. I learn by building, experiment with new ideas, and keep improving every project.</p>
+        <section class="sj-profile" aria-label="Sourajit profile">
+          <div class="sj-profile-header">
+            <div class="sj-profile-photo-wrapper">
+              <img class="sj-profile-photo" src="https://i.ibb.co/DfYtQS3d/file-0000000001b48211b01ee751b7849870.png" alt="Sourajit profile photo" loading="eager" />
+            </div>
+            <div class="sj-profile-info">
+              <small>PORTFOLIO · 2026</small>
+              <h2>SOURAJIT <span>VFX</span></h2>
+              <p>Developer · Bot Builder · Creative Explorer</p>
+            </div>
+          </div>
+          <div class="sj-learning"><span class="sj-live-dot"></span>CURRENTLY LEARNING &amp; BUILDING</div>
+          <div class="sj-intro">
+            <div class="sj-intro-label">BUILDING IDEAS INTO</div>
+            <h1 class="sj-intro-title"><span class="digital">digital</span><span class="reality">reality.</span></h1>
+            <p class="sj-intro-description">I'm <strong>Sourajit</strong> — an aspiring developer from <strong>Tripura, India</strong>, exploring bots, web applications, APIs, and creative digital experiences. I learn by building, experiment with new ideas, and keep improving every project.</p>
+          </div>
+          <div class="sj-profile-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Node.js</span><span>Python</span><span>PHP</span><span>MongoDB</span>
+          </div>
+        </section>
         <div class="hero-cta">
           <a href="#projects" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Explore My Projects</a>
           <a href="https://github.com/Rdx690" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg> Visit GitHub</a>
