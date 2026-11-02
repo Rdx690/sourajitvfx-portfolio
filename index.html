@@ -1694,6 +1694,32 @@ h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.02em}
 #intro .opening-banner-image{display:block;width:100%;height:auto;max-height:100%;object-fit:contain;object-position:center;margin:0;border:0;box-shadow:0 0 35px rgba(34,211,238,.18)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.glass-card,.info-card,.skill-card,.project-card,.github-card{transition:none}}
 </style>
+
+<style id="sourajitvfx-profile-name-visibility-fix">
+/* Make SOURAJIT bold, bright and readable on dark/mobile screens */
+.sj-profile-info h2{
+  color:#ffffff !important;
+  -webkit-text-fill-color:#ffffff !important;
+  font-weight:1000 !important;
+  font-family:Arial,Helvetica,sans-serif !important;
+  letter-spacing:-1.1px !important;
+  text-shadow:0 0 2px rgba(255,255,255,.55),0 2px 14px rgba(34,211,238,.22) !important;
+  opacity:1 !important;
+  filter:none !important;
+}
+.sj-profile-info h2 span{
+  background:linear-gradient(90deg,#45eaff 0%,#8b9cff 52%,#c084fc 100%) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  font-weight:1000 !important;
+  text-shadow:0 0 18px rgba(139,92,246,.28) !important;
+}
+@media(max-width:600px){
+  .sj-profile-info h2{font-size:clamp(27px,7vw,36px) !important;line-height:1.12 !important;}
+}
+</style>
+
 </head>
 <body>
 
