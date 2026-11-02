@@ -1621,15 +1621,90 @@ footer a{color:#356fc4!important}
 #intro .opening-placeholder p{margin-top:14px;color:#71eaff;font:12px monospace;letter-spacing:2px}
 @media(prefers-reduced-motion:reduce){#intro{transition:none!important}}
 </style>
+<style id="sourajitvfx-cyberpunk-design-system-2026">
+/* ============ DESIGN TOKENS & CYBERPUNK VARIABLES ============ */
+:root{
+ --bg-0:#03040a;--bg-1:#070918;--bg-2:#0d1228;
+ --panel:rgba(13,18,40,.7);--panel-solid:#0b0f22;
+ --border:rgba(103,232,249,.18);--border-strong:rgba(167,139,250,.4);
+ --text:#f1f5f9;--text-dim:#94a3b8;--text-faint:#64748b;
+ --violet:#8b5cf6;--violet-glow:rgba(139,92,246,.5);
+ --cyan:#22d3ee;--cyan-glow:rgba(34,211,238,.5);
+ --magenta:#f472b6;--magenta-glow:rgba(244,114,182,.5);
+ --grad:linear-gradient(135deg,#22d3ee 0%,#8b5cf6 50%,#f472b6 100%);
+ --grad-soft:linear-gradient(135deg,rgba(34,211,238,.15),rgba(139,92,246,.15));
+ --radius:18px;--radius-lg:26px;
+ --shadow-neon:0 0 35px rgba(34,211,238,.2);
+ --shadow-card:0 20px 50px -15px rgba(0,0,0,.8);
+ --font-sans:"Inter",system-ui,sans-serif;
+ --font-display:"Space Grotesk",sans-serif;
+ --font-tech:"Orbitron",sans-serif;
+ --font-mono:"JetBrains Mono",monospace;
+ --nav-h:76px;--ease-spring:cubic-bezier(.22,.61,.36,1);
+ /* Compatibility aliases for the existing portfolio stylesheet */
+ --ease:var(--ease-spring);--shadow:var(--shadow-card);
+ --violet-2:#a78bfa;--cyan-2:#67e8f9;--pink:var(--magenta);
+ --glow-v:0 0 32px var(--violet-glow);--glow-c:0 0 32px var(--cyan-glow);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg-0);color:var(--text);font-family:var(--font-sans)}
+::-webkit-scrollbar{width:10px}
+::-webkit-scrollbar-track{background:var(--bg-0)}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--cyan),var(--violet));border-radius:10px}
+.bg-fx{background:radial-gradient(1000px 700px at 90% -10%,rgba(139,92,246,.12),transparent 60%),radial-gradient(900px 600px at 5% 20%,rgba(34,211,238,.1),transparent 55%),radial-gradient(800px 800px at 50% 110%,rgba(244,114,182,.08),transparent 60%),var(--bg-0)}
+.grid-overlay{background-image:linear-gradient(rgba(103,232,249,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(103,232,249,.04) 1px,transparent 1px);background-size:50px 50px}
+@keyframes neonBorderPulse{
+ 0%{border-color:rgba(34,211,238,.3);box-shadow:0 0 20px rgba(34,211,238,.15),inset 0 0 15px rgba(34,211,238,.05)}
+ 50%{border-color:rgba(139,92,246,.5);box-shadow:0 0 30px rgba(139,92,246,.25),inset 0 0 20px rgba(139,92,246,.1)}
+ 100%{border-color:rgba(244,114,182,.3);box-shadow:0 0 20px rgba(244,114,182,.15),inset 0 0 15px rgba(244,114,182,.05)}
+}
+.glass-card,.info-card,.skill-card,.project-card,.github-card{
+ background:var(--panel);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+ border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-card);
+ transition:transform .35s var(--ease-spring),border-color .3s,box-shadow .3s;
+ position:relative;overflow:hidden
+}
+.glass-card:hover,.info-card:hover,.skill-card:hover,.project-card:hover{transform:translateY(-6px);animation:neonBorderPulse 4s infinite alternate}
+h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.02em}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cyber-badge{
+ display:inline-flex;align-items:center;gap:8px;font-family:var(--font-mono);
+ font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan);
+ padding:6px 14px;border-radius:100px;background:rgba(34,211,238,.08);
+ border:1px solid rgba(34,211,238,.25);box-shadow:0 0 15px rgba(34,211,238,.1)
+}
+.cyber-badge:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.btn-cyber{
+ display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 26px;
+ border-radius:14px;font-weight:700;font-size:.88rem;text-decoration:none;cursor:pointer;
+ transition:all .3s var(--ease-spring);border:1px solid rgba(34,211,238,.3);
+ background:var(--grad);color:#03040a;box-shadow:0 10px 30px -10px rgba(34,211,238,.5);
+ position:relative;overflow:hidden
+}
+.btn-cyber:hover{transform:translateY(-3px);box-shadow:0 15px 40px -10px rgba(139,92,246,.7);filter:brightness(1.1)}
+.btn-cyber-ghost{
+ display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 26px;
+ border-radius:14px;font-weight:600;font-size:.88rem;text-decoration:none;cursor:pointer;
+ transition:all .3s var(--ease-spring);border:1px solid var(--border-strong);
+ background:rgba(13,18,40,.6);color:var(--text);backdrop-filter:blur(10px)
+}
+.btn-cyber-ghost:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px);box-shadow:0 0 25px rgba(34,211,238,.2);background:rgba(34,211,238,.05)}
+/* Opening artwork */
+#intro{background:#03040a!important;overflow:hidden}
+#intro .opening-banner-image{display:block;width:100%;height:auto;max-height:100%;object-fit:contain;object-position:center;margin:0;border:0;box-shadow:0 0 35px rgba(34,211,238,.18)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.glass-card,.info-card,.skill-card,.project-card,.github-card{transition:none}}
+</style>
 </head>
 <body>
 
 <!-- CINEMATIC INTRO OVERLAY -->
 <div id="intro" aria-hidden="true">
-  <div class="opening-placeholder">
-    <h1>SOURAJIT <span>VFX</span></h1>
-    <p>DEVELOPER · BOT BUILDER · VFX CREATOR</p>
-  </div>
+  <img
+    class="opening-banner-image"
+    src="https://i.ibb.co/mV2d5fJw/c03ec4b78839ce25bcf16da2e5512cbde37e285637f119b3e6ac66e1f98c843c.png"
+    alt="Sourajit VFX Opening Artwork"
+    fetchpriority="high"
+  />
 </div>
 
 <!-- BG FX -->
